@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+
+img{
+    
+    max-width: 100%;
+    height: auto;
+    
+}
+
+
+:root{
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+
+
+body{
+    background-color: var(--DarkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main{
+    width: min(22.5rem,92%);
+    height: auto;
+
+}
+
+article{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--DarkGrayishBlue);
+    width: 100%;
+    height: auto;
+    border-radius: .6rem;
+    box-shadow: 0 0 4rem 0.01rem rgba(0, 0, 0, 0.2);
+    
+}
+
+.advice{
+    color: var(--NeonGreen);
+    font-size: .7rem;
+    text-align: center;
+    letter-spacing: .2rem;
+    
+    margin-top: 2rem;
+}
+
+.advice_text{
+    text-align: center;
+    font-size: clamp(1rem,5vw,1.7rem);
+    color:var(--LightCyan);
+    margin-top: 1rem;
+    max-width: 18ch;
+    align-self: center;
+}
+
+.divider{
+    padding: 0 2rem;
+    margin-top: 1rem;
+
+}
+
+.animate{
+animation: spin 0.5s 1 ease-in;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.button{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--NeonGreen);
+    border-radius: 2rem;
+    align-self: center;
+    transform: translateY(50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow .3s ease-out;
+}
+
+.button:hover{
+    box-shadow:  0 0 2rem 0 var(--NeonGreen);
+}
+
+.button > img{
+    width: 1.2rem;
+}
+
+
+@media screen and (min-width: 1000px) {
+    .advice_text{
+        max-width: 23ch;
+    }
+
+    article{
+        
+        width: 28rem;
+        
+    }
+}
